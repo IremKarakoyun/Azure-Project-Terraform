@@ -6,9 +6,9 @@ This Terraform setup is designed to deploy a WordPress application on Microsoft 
 It includes provisioning for the required infrastructure, including a VM scale set, load balancer, MySQL database, networking components, and security configurations.
 
 ## Prerequisites
-[x] Terraform installed on your machine.
-[x] Azure CLI installed and authenticated.
-[x] Required provider plugins, as mentioned in the backend.tf.
+- [x] Terraform installed on your machine.
+- [x] Azure CLI installed and authenticated.
+- [x] Required provider plugins, as mentioned in the backend.tf.
 
 ## Structure
 The setup is broken down into multiple Terraform files, each serving a specific purpose:
