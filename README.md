@@ -1,14 +1,16 @@
 # Azure-Project-Terraform
 
-Terraform Deployment for WordPress on Azure
-This Terraform setup is designed to deploy a WordPress application on Microsoft Azure. It includes provisioning for the required infrastructure, including a VM scale set, load balancer, MySQL database, networking components, and security configurations.
+# Terraform Deployment for WordPress on Azure
 
-Prerequisites
+This Terraform setup is designed to deploy a WordPress application on Microsoft Azure. 
+It includes provisioning for the required infrastructure, including a VM scale set, load balancer, MySQL database, networking components, and security configurations.
+
+## Prerequisites
 1. Terraform installed on your machine.
 2. Azure CLI installed and authenticated.
 3. Required provider plugins, as mentioned in the backend.tf.
 
-Structure
+## Structure
 The setup is broken down into multiple Terraform files, each serving a specific purpose:
 
 - backend.tf: Specifies required provider versions.
@@ -24,40 +26,30 @@ The setup is broken down into multiple Terraform files, each serving a specific 
 - variables.tf: Declares and initializes variables used across the setup.
 - vnet.tf: Defines virtual network and public IP configurations.
 
-Usage
+## Usage
 Initialization:
 
-csharp
-Copy code
-terraform init
-Workspace Creation & Deployment:
+`terraform init`
+
+## Workspace Creation & Deployment:
 
 Use the makefile for deploying resources in specific regions:
 
-bash
-Copy code
-# For West Europe
-make westeurope
+### For West Europe
+`make westeurope` [specify the prefered region]
 Available regions: westeurope, eastus, uksouth, africanorth, canadaeast, and norwayeast.
 
-Destroy Resources:
 
-To tear down resources:
+### For West Europe
+`make westeurope-destroy` [specify the prefered region]
 
-bash
-Copy code
-# For West Europe
-make westeurope-destroy
-Use corresponding destroy commands for other regions.
-
-Outputs:
-
+## Outputs:
 After successful deployment, the application's public address will be outputted. You can access WordPress using this address.
 
-Security Considerations
+## Security Considerations
 - Passwords and other secrets are hard-coded in the provided files.
 - Ensure firewall rules in securitygroup.tf are locked down to only the necessary IPs or ranges.
 
-Contributing
+## Contributing
 Contributions are welcome! Please ensure you test any changes thoroughly before submitting a pull request.
 
