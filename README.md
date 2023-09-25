@@ -13,7 +13,7 @@ It includes provisioning for the required infrastructure, including a VM scale s
 ## Structure
 The setup is broken down into multiple Terraform files, each serving a specific purpose:
 
-- backend.tf: Specifies required provider versions.
+- [x] backend.tf: Specifies required provider versions.
 - customdata.tpl: Bash script for setting up WordPress on VM instances.
 - loadbalancer.tf: Provisions the Azure Load Balancer.
 - makefile: Make commands for applying and destroying Terraform in different Azure regions.
